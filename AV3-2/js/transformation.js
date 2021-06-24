@@ -51,7 +51,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -70,7 +70,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -89,7 +89,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -108,7 +108,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -127,7 +127,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -146,7 +146,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -165,7 +165,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -184,7 +184,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -203,7 +203,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -222,7 +222,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -280,7 +280,7 @@ class Transformations {
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
       return new Vector(matrizResultado.linhas, matrizResultado.elementos);
-      // return matrizResultado;
+//       return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }
@@ -361,7 +361,7 @@ class Transformations {
 
       let matrizResultado = la.dot(matrizTransformacao, matrizColuna);
 
-      return matrizResultado;
+      return new Vector(matrizResultado.linhas, matrizResultado.elementos);
     } else {
       throw "Dados incompatíveis";
     }

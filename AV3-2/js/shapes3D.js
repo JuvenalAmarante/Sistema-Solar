@@ -103,7 +103,7 @@ class Sphere {
         let sectorAngle = indice2 * sectorStep;
         let vx = xy * Math.cos(sectorAngle);
         let vy = xy * Math.sin(sectorAngle);
-        this.points.push(new Vector(3, [vx + x, vy + y, vz + z]));
+        this.points.push(new Vector(3, [vx, vy, vz]));
       }
     }
 
@@ -130,7 +130,6 @@ class Sphere {
     }
 
     this.tr = new Transformations();
-    console.log(this.newPoints);
   }
 
   rotateX(angulo) {
@@ -151,18 +150,18 @@ class Sphere {
     }
   }
 
-  translateX(dx) {
-    for (let index = 0; index < this.newPoints.length; index++) {
-      this.newPoints[index] = new Vector(this.newPoints[index].dimensao, [this.newPoints[index].get(1) - this.x,this.newPoints[index].get(2) - this.y, this.newPoints[index].get(3) - this.z]);
-    }
+  translateX(dx, dy, dz) {
+    // for (let index = 0; index < this.newPoints.length; index++) {
+    //   this.newPoints[index] = new Vector(this.newPoints[index].dimensao, [this.newPoints[index].get(1) - this.x,this.newPoints[index].get(2) - this.y, this.newPoints[index].get(3) - this.z]);
+    // }
 
     for (let index = 0; index < this.newPoints.length; index++) {
-      this.newPoints[index] = this.tr.rotation3DX(this.newPoints[index], dx);
+      // this.newPoints[index] = this.tr.projection3DX(this.newPoints[index]);
     }
 
-    for (let index = 0; index < this.newPoints.length; index++) {
-        this.newPoints[index] = new Vector(this.newPoints[index].dimensao, [this.newPoints[index].get(1) + this.x,this.newPoints[index].get(2) + this.y, this.newPoints[index].get(3) + this.z]);
-    }
+    // for (let index = 0; index < this.newPoints.length; index++) {
+    //     this.newPoints[index] = new Vector(this.newPoints[index].dimensao, [this.newPoints[index].get(1) + this.x,this.newPoints[index].get(2) + this.y, this.newPoints[index].get(3) + this.z]);
+    // }
   }
 
   translateY(dy) {
@@ -191,13 +190,22 @@ class Sphere {
     // console.log(r,g,b)
     this.color = {r,g,b};
   } 
+
   draw() {
     beginShape();
-    noStroke()
+    // noStroke()
+    for (let index = 0; index < this.newPoints.length; index++) {
+      // this.newPoints[index] = this.tr.translate3D(this.newPoints[index], this.x, this.y, this.z);
+      this.newPoints[index] = this.tr.translate3D(this.newPoints[index], 1, 1, 1);
+      // console.log(this.tr.translate3D(this.newPoints[index], this.x, this.y, this.z));
+    }
+    
     if(this.color!=null) fill(color(this.color.r, this.color.g, this.color.b));
+
     this.newPoints.forEach((point) =>
       vertex(point.get(1), point.get(2), point.get(3))
     );
+    // console.log(this.newPoints);
 
     endShape();
   }
